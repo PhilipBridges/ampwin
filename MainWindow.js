@@ -4,16 +4,16 @@ class MainWindow extends BrowserWindow {
   constructor(file, isDev) {
     super({
       title: "ampwin",
-      width: isDev ? 800 : 355,
-      height: 600,
+      width: isDev ? 800 : 565,
+      height: 390,
       // icon: `${__dirname}/assets/icons/icon.png`,
-      resizable: isDev ? true : false,
-      show: false,
+      resizable: true,
+      show: true,
       opacity: 0.95,
       webPreferences: {
         nodeIntegration: true,
       },
-      
+      frame: false,
     });
 
     this.loadFile(file);

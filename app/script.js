@@ -12,14 +12,14 @@ const { ipcRenderer } = require("electron");
 
 const path = require("path");
 
-let data = ipcRenderer.sendSync("get-file-data");
+// let data = ipcRenderer.sendSync("get-file-data");
 
-if (data === null) {
-  console.log("There is no file");
-} else {
-  // Do something with the file.
-  loadSong(data);
-}
+// if (data === null) {
+//   console.log("There is no file");
+// } else {
+//   // Do something with the file.
+//   loadSong(data);
+// }
 
 ipcRenderer.on("open:song", (event, x) => {
   loadSong(x);
